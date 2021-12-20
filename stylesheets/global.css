@@ -36,7 +36,7 @@
     transition-duration: 0.1s;
     color: #103754;
     cursor: pointer;
-    border: 0.1rem solid #103754;
+    border: 0.05rem solid #103754;
 }
 
 thead {
