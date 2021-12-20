@@ -61,6 +61,7 @@ function constructCandidateTableRow(candidate, tableRow) {
             .then(response => response.json())
             .then(result => {
                 result.forEach(party => {
+                    //Create option for each party available
                     const partyOption = document.createElement("option");
                     partyOption.innerText = party.party;
                     partyOption.value = party.id;
@@ -74,16 +75,17 @@ function constructCandidateTableRow(candidate, tableRow) {
     });
 
     acceptUpdateButton.addEventListener("click", () => {
+        //Use first child to retrieve the value of the first node returned https://www.w3schools.com/jsref/prop_node_firstchild.asp
         const candidatePartySelect = candidatePartyTd.firstChild;
         const candidateToUpdate = {
             name: candidateNameTd.firstChild.value,
             party: {
                 id: Number(candidatePartyTd.firstChild.value),
+                //Use options.[index] to retrieve the text of a selected option because value is party id, and the party name is needed as well
                 party: candidatePartySelect.options[candidatePartySelect.selectedIndex].text
             }
         };
 
-        console.log(candidatePartySelect.options[candidatePartySelect.selectedIndex])
         fetch(baseURL + "/candidates/" + candidate.id, {
             method: "PATCH",
             headers: {"Content-type": "application/json; charset=UTF-8"},

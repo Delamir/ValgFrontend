@@ -1,5 +1,4 @@
 const resultTbody = document.getElementById("result-tbody");
-const resultTable = document.getElementById("result-table");
 
 fetch(baseURL + "/parties")
     .then(response => response.json())
