@@ -52,6 +52,7 @@ thead {
     border-collapse: collapse;
     margin: 0 auto;
     border: 0.1rem solid #103754;
+    text-align: center;
 }
 
 .div-table td {
