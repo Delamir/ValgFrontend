@@ -46,6 +46,8 @@ thead {
 
 .div-table {
     padding: 1rem 0 0 0.1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .div-table table {
@@ -117,6 +119,11 @@ button {
 button:hover {
     background-color: #103754;
     color: white;
+}
+
+#new-candidate-button {
+    margin-bottom: 1rem;
+    align-self: center;
 }
 
 
