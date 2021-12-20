@@ -145,10 +145,13 @@ console.log(document.getElementById("new-candidate-party").value)
         if (response.status === 200) {
             newCandidateModal.style.display = "none";
             document.getElementById("new-candidate-name").value = "";
-            createCandidateTableRow(candidateToCreate);
+            return response.json();
         } else {
             throw("Kan ikke oprette kandidat")
         }
+    }).then(result => {
+        candidateToCreate.id = result.id;
+        createCandidateTableRow(candidateToCreate);
     });
 }
 
