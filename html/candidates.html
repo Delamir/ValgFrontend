@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../stylesheets/global.css">
+    <meta charset="UTF-8">
+    <title>Kandidater</title>
+</head>
+<body>
+<nav class="menu">
+    <ul>
+        <li><a href="../html/index.html">Forside</a></li>
+        <li><a href="../html/candidates.html">Kandiater</a></li>
+        <li><a href="../html/result.html">Valg Resultat</a></li>
+    </ul>
+</nav>
+
+<div class="div-table">
+    <button id="new-candidate-button">Opret kandidat</button>
+    <table id="candidate-table">
+        <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Parti</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody id="candidate-tbody"></tbody>
+
+    </table>
+</div>
+
+<!-- Made with help from https://www.w3schools.com/howto/howto_css_modals.asp -->
+<div id="new-candidate-modal" class="modal">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <br>
+        <h3>Opret ny kandidat</h3>
+        <label for="new-candidate-name">Navn</label><br><input type="text" id="new-candidate-name">
+        <br>
+        <label for="new-candidate-party">Parti</label><br><select name="party" id="new-candidate-party"></select>
+        <button id="new-candidate-submit">Opret kandidat</button>
+    </div>
+</div>
+
+<script src="../scripts/global.js"></script>
+<script src="../scripts/candidates.js"></script>
+</body>
+</html>
